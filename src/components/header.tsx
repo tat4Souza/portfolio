@@ -45,7 +45,11 @@ function Header() {
     <div ref={placeholderRef} style={{ height }} className="w-full">
       <header
         ref={headerRef}
-        className={isFixed ? "fixed inset-x-0 top-0 z-50 py-3" : "w-full"}
+        className={
+          isFixed
+            ? "fixed inset-x-0 top-0 z-50 bg-background/80 backdrop-blur py-3"
+            : "w-full"
+        }
       >
         <div className={isFixed ? "mx-auto w-[75%]" : "w-full"}>
           <NavigationMenu className="max-w-full w-full">

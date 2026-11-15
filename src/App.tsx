@@ -1,3 +1,5 @@
+import AboutSection from "./components/about-section";
+import ContactSection from "./components/contact-section";
 import HomeSection from "./components/home-section";
 import ProjectsSection from "./components/projects-section";
 import SkillsSection from "./components/skills-section";
@@ -8,18 +10,12 @@ function App() {
       <HomeSection />
       <ProjectsSection />
       <SkillsSection />
-      <section
-        id="about"
-        className="h-min-screen h-screen flex flex-col pt-25 w-[75%] gap-10"
-      >
-        <h3 className="h3-title mb-6">Sobre</h3>
-      </section>
-      <section
-        id="contact"
-        className="h-min-screen h-screen flex flex-col pt-25 w-[75%] gap-10"
-      >
-        <h3 className="h3-title mb-6">Contato</h3>
-      </section>
+      <AboutSection />
+      <ContactSection />
+
+      <footer className="p-3 text-primary">
+        © Desenvolvido por Taís Souza
+      </footer>
     </>
   );
 }

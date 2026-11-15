@@ -208,6 +208,6 @@
   }
 
   .h3-title {
-    @apply text-6xl font-serif text-primary;
+    @apply text-5xl font-serif text-primary;
   }
 }
