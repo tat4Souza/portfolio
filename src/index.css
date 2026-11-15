@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Racing+Sans+One&family=Sekuya&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -24,7 +25,7 @@
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.8911 0.0405 17.9378);
   --input: oklch(0.8911 0.0405 17.9378);
-  --ring: oklch(0.465 0.147 24.9381);
+  --ring: oklch(52.927% 0.16564 27.411);
   --chart-1: oklch(0.5054 0.1905 27.5181);
   --chart-2: oklch(0.465 0.147 24.9381);
   --chart-3: oklch(0.3958 0.1331 25.723);
@@ -38,9 +39,9 @@
   --sidebar-accent-foreground: oklch(0.3958 0.1331 25.723);
   --sidebar-border: oklch(0.8911 0.0405 17.9378);
   --sidebar-ring: oklch(0.465 0.147 24.9381);
-  --font-sans: Poppins, sans-serif;
-  --font-serif: Libre Baskerville, serif;
-  --font-mono: IBM Plex Mono, monospace;
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Racing Sans One, ui-serif, serif;
+  --font-mono: Sekuya, ui-serif, serif;
   --radius: 0.375rem;
   --shadow-x: 1px;
   --shadow-y: 1px;
@@ -72,16 +73,16 @@
 
 .dark {
   --background: oklch(0.1855 0.008 181.9583);
-  --foreground: oklch(0.8805 0.0095 52.0861);
-  --card: oklch(0.2086 0.0078 211.0842);
-  --card-foreground: oklch(0.8805 0.0095 52.0861);
+  --foreground: rgb(135, 133, 147);
+  --card: oklch(20.864% 0.00784 211.237);
+  --card-foreground: #616b75;
   --popover: oklch(0.2818 0.0137 220.0108);
   --popover-foreground: oklch(0.8805 0.0095 52.0861);
-  --primary: oklch(0.5293 0.1657 27.4279);
+  --primary: rgb(184, 56, 49);
   --primary-foreground: oklch(0.8805 0.0095 52.0861);
   --secondary: oklch(0.3958 0.1535 22.3529);
   --secondary-foreground: oklch(0.8805 0.0095 52.0861);
-  --muted: oklch(0.2256 0.0066 258.3645);
+  --muted: oklch(0.2336 0.009 208.7481);
   --muted-foreground: oklch(0.8687 0.0043 56.366);
   --accent: oklch(0.643 0.1601 31.9287);
   --accent-foreground: oklch(0.8805 0.0095 52.0861);
@@ -103,9 +104,9 @@
   --sidebar-accent-foreground: oklch(0.8805 0.0095 52.0861);
   --sidebar-border: oklch(0.3074 0.0196 223.4054);
   --sidebar-ring: oklch(0.5054 0.1905 27.5181);
-  --font-sans: Poppins, sans-serif;
-  --font-serif: Libre Baskerville, serif;
-  --font-mono: IBM Plex Mono, monospace;
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Racing Sans One, ui-serif, serif;
+  --font-mono: Sekuya, ui-serif, serif;
   --radius: 0.375rem;
   --shadow-x: 1px;
   --shadow-y: 1px;
@@ -192,5 +193,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+  }
+  section {
+    scroll-snap-align: start;
+  }
+
+  .nav__item {
+    @apply bg-card/50 hover:bg-popover/50! px-12! py-2! border rounded-tr-none! rounded-bl-none! text-primary font-serif text-xl!;
   }
 }
