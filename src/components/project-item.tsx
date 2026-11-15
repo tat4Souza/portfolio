@@ -28,7 +28,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
       <div className="p-1 flex  h-min-content gap-8">
-        <Card className="flex-1 pt-0 bg-[#14191A]">
+        <Card className="flex-1 pt-0 bg-card">
           <video
             src={project.videoUrl}
             preload="metadata"
@@ -38,7 +38,7 @@ function ProjectItem({ project }: ProjectItemProps) {
             playsInline
             className="relative z-20 aspect-video w-full object-cover "
           />
-          <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-primary-foreground">
+          <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground">
             <h4 className="text-sm">{project.tituloVideo}</h4>
             <span className="font-serif text-xs ">
               {project.inicio.toDateString()} -{project.fim.toDateString()}
@@ -75,7 +75,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               )}
             </span>
           </div>
-          <div className="flex flex-col gap-3 leading-8 text-primary-foreground">
+          <div className="flex flex-col gap-3 leading-8 text-foreground dark:text-primary-foreground">
             <p>{project.descProblema}</p>
             <div className="border-b border-popover/50 my-2"></div>
             <p>{project.descSolucao}</p>

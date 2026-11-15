@@ -11,7 +11,7 @@ const navOptions = [
   { title: "Projetos", url: "#projects" },
   { title: "Habilidades", url: "#skills" },
   { title: "Sobre", url: "#about" },
-  { title: "Contact", url: "#" },
+  { title: "Contact", url: "#contact" },
 ];
 
 function Header() {
@@ -20,7 +20,6 @@ function Header() {
   const [isFixed, setIsFixed] = useState(false);
   const [height, setHeight] = useState<number>();
 
-  // mede a altura do header para reservar o espaço quando ele sair do fluxo
   useLayoutEffect(() => {
     const measure = () => setHeight(headerRef.current?.offsetHeight);
     measure();
@@ -28,7 +27,6 @@ function Header() {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  // quando o espaço reservado chega ao topo da tela, o header vira fixed
   useEffect(() => {
     const update = () => {
       const top = placeholderRef.current?.getBoundingClientRect().top ?? 1;

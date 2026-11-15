@@ -206,4 +206,8 @@
   .nav__item {
     @apply bg-card/50 hover:bg-popover/50! px-12! py-2! border rounded-tr-none! rounded-bl-none! text-primary font-serif text-xl!;
   }
+
+  .h3-title {
+    @apply text-6xl font-serif text-primary;
+  }
 }
